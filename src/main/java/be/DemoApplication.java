@@ -20,7 +20,8 @@ public class DemoApplication {
 	@Bean
 	public ServletWebServerFactory servletContainer() {
 		// Enable SSL Trafic
-		TomcatServletWebServerFactory tomcat = new TomcatServletWebServerFactory() {
+
+		return new TomcatServletWebServerFactory() {
 			@Override
 			protected void postProcessContext(Context context) {
 				SecurityConstraint securityConstraint = new SecurityConstraint();
@@ -31,8 +32,6 @@ public class DemoApplication {
 				context.addConstraint(securityConstraint);
 			}
 		};
-
-		return tomcat;
 	}
 
 }
