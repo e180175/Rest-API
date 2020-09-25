@@ -12,8 +12,8 @@
 
     <groupId>be</groupId>
     <artifactId>API</artifactId>
-    <version>0.1</version>
-    <name>API</name>
+    <version>1.0</version>
+    <name>API-Rest</name>
 
     <properties>
         <java.version>10</java.version>
