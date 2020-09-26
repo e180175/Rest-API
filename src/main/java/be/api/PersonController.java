@@ -64,7 +64,7 @@ public class PersonController {
 	@PutMapping(path = "{id}")
 	public void updatePerson(@PathVariable("id") UUID id, @RequestBody Person person) {
 		if(personService.updatePerson(id, person) == ResponseCode.RESPONSE_CODE_OK){
-			logger.info("Updating " + id + "name to " + person.getName() + " ..");
+			logger.info("Updating " + id + " name to " + person.getName() + " ..");
 		}else{
 			logger.error(id+ " was not updated to " + person.getName() + " !");
 		}
