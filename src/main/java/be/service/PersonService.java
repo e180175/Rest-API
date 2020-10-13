@@ -19,7 +19,7 @@ public class PersonService {
 	private final PersonDao personDao;
 	
 	@Autowired
-	public PersonService(@Qualifier("mySql")PersonDao personDao) {
+	public PersonService(@Qualifier("derby")PersonDao personDao) {
 		this.personDao = personDao;
 	}
 	
